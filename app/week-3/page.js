@@ -1,6 +1,5 @@
 import ItemList from "./item-list";
 
-
 export default function Week3Page(){
     return (
         <main>
