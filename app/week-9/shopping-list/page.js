@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
@@ -15,11 +14,8 @@ export default function Page() {
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
   const { user } = useUserAuth();
-  const navigate = useNavigate();
+  
 
-  useEffect(() => {
-    if (!user) navigate("/"); // Adjust the path to your landing page
-  }, [user, navigate]);
 
   const handleAddItem = (item) => {
     setItems([...items, item]);
