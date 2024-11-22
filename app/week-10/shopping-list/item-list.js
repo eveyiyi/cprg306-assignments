@@ -1,5 +1,4 @@
-// item-list.js
-"use client";
+"use client"
 import React, { useState } from "react";
 import Item from "./item";
 
